@@ -60,7 +60,9 @@ static void	get_input(char *inp, t_stack **stack_a, t_stack **stack_b)
 static void	process_and_check(t_stack **stack_a, t_stack **stack_b)
 {
 	char	*line;
-	int len = stack_len(*stack_a);
+	int		len;
+
+	len = stack_len(*stack_a);
 	line = get_next_line(0);
 	while (line != NULL)
 	{
