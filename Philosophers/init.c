@@ -6,7 +6,7 @@
 /*   By: mbarrah <mbarrah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 20:04:17 by mbarrah           #+#    #+#             */
-/*   Updated: 2025/04/16 20:04:17 by mbarrah          ###   ########.fr       */
+/*   Updated: 2025/04/16 21:12:02 by mbarrah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,5 @@ void	init_table(t_table *table, int ac, char **av)
 		table->must_eat_times = ft_atoi(av[5]);
 	else
 		table->must_eat_times = -1;
-	
 	table->finish_flag = 0;
 }

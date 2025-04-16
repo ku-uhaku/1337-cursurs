@@ -6,7 +6,7 @@
 /*   By: mbarrah <mbarrah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 20:04:03 by mbarrah           #+#    #+#             */
-/*   Updated: 2025/04/16 20:04:03 by mbarrah          ###   ########.fr       */
+/*   Updated: 2025/04/16 21:13:13 by mbarrah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	*start_dinner(void *ptr)
 
 	philo = (t_philo *)ptr;
 	if (philo->id % 2 == 0)
-		advance_time(philo, philo->table->time_to_eat); /*This check is for make sure that the philo with even id will eat first*/
+		advance_time(philo, philo->table->time_to_eat);
 	while (1)
 	{
 		if (philo->table->philosophers == 1)
@@ -106,20 +106,6 @@ void	*start_dinner(void *ptr)
 		print_action(philo, THINK);
 		if (philo->table->philosophers % 2 != 0)
 			advance_time(philo, philo->table->time_to_eat);
-	}	
-	return (0);
-}
-
-int	philosophers_to_threads(t_table *table)
-{
-	int	i;
-
-	i = -1;
-	while (++i < table->philosophers)
-	{
-		if (pthread_create(&table->philo[i].thread, NULL, \
-			start_dinner, &table->philo[i]))
-			exit_error("Couldn't create thread", table, 3);
 	}
 	return (0);
 }

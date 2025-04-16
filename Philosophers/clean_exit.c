@@ -6,17 +6,16 @@
 /*   By: mbarrah <mbarrah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 09:59:43 by mbarrah           #+#    #+#             */
-/*   Updated: 2025/04/13 09:59:44 by mbarrah          ###   ########.fr       */
+/*   Updated: 2025/04/16 21:10:31 by mbarrah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "philo.h"
 
 void	clean_table(t_table *table)
 {
-	free (table->philo);
-	free (table->fork_lock);
+	free(table->philo);
+	free(table->fork_lock);
 }
 
 void	destroy_locks(t_table *table)

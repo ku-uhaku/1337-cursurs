@@ -6,7 +6,7 @@
 /*   By: mbarrah <mbarrah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 20:03:54 by mbarrah           #+#    #+#             */
-/*   Updated: 2025/04/16 20:03:54 by mbarrah          ###   ########.fr       */
+/*   Updated: 2025/04/16 21:10:57 by mbarrah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,9 @@ void	print_action(t_philo *philo, const char *status)
 		printf("%lld %d %s\n", time, philo->id, status);
 	}
 	safe_mutex_unlock(&philo->table->print_lock, philo->table);
-	
 }
 
-long long	now()
+long long	now(void)
 {
 	struct timeval	timeval;
 

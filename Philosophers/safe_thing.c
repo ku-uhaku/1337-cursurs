@@ -6,7 +6,7 @@
 /*   By: mbarrah <mbarrah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 20:04:06 by mbarrah           #+#    #+#             */
-/*   Updated: 2025/04/16 20:04:06 by mbarrah          ###   ########.fr       */
+/*   Updated: 2025/04/16 21:10:52 by mbarrah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ void	safe_mutex_unlock(pthread_mutex_t *mutex, t_table *table)
 	if (pthread_mutex_unlock(mutex) != 0)
 		exit_error("Failed to unlock mutex", table, 2);
 }
-
